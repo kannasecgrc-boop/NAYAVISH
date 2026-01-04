@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({
           {/* Logo */}
           <div className="text-xl md:text-2xl font-black tracking-tighter cursor-pointer flex items-center shrink-0" onClick={() => setView(View.HOME)}>
             <span className="w-8 h-8 md:w-10 md:h-10 bg-brand rounded-xl flex items-center justify-center text-white mr-2 md:mr-3 text-sm md:text-lg">{firstLetter}</span>
-            <span className="hidden sm:inline">MANA <span className="text-brand">KITCHEN</span></span>
+            <span className="hidden sm:inline">NAYA<span className="text-brand">VISH</span></span>
           </div>
         </div>
         
@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({
             </span>
             <input 
               type="text" 
-              placeholder="Search dishes..."
+              placeholder="Search products..."
               value={search}
               onChange={handleSearchChange}
               className="w-full pl-11 pr-4 py-3 bg-gray-50 border border-transparent focus:bg-white focus:border-brand/20 focus:ring-4 ring-brand/5 rounded-2xl outline-none text-sm font-medium transition-all"
@@ -67,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({
         {/* Navigation - Desktop */}
         <nav className="hidden lg:flex items-center space-x-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">
           <button onClick={() => setView(View.HOME)} className={`hover:text-brand transition-colors ${currentView === View.HOME ? 'text-brand' : ''}`}>Home</button>
-          <button onClick={() => setView(View.SHOP)} className={`hover:text-brand transition-colors ${currentView === View.SHOP ? 'text-brand' : ''}`}>Menu</button>
+          <button onClick={() => setView(View.SHOP)} className={`hover:text-brand transition-colors ${currentView === View.SHOP ? 'text-brand' : ''}`}>Catalog</button>
           {installPrompt && (
              <button onClick={onInstallApp} className="bg-gray-900 text-white px-4 py-2 rounded-xl hover:bg-brand transition-colors animate-pulse">
                Install App

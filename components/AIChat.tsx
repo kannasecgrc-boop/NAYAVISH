@@ -13,7 +13,7 @@ interface AIChatProps {
 
 const AIChat: React.FC<AIChatProps> = ({ products, isOpen, onClose, user, orders }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', content: "Namaste! I'm your Mana Kitchen Assistant. How can I help you pick the perfect meal today?" }
+    { role: 'model', content: "Namaste! I'm your Nayavish Beauty Assistant. How can I help you pick the perfect product today?" }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -49,11 +49,11 @@ const AIChat: React.FC<AIChatProps> = ({ products, isOpen, onClose, user, orders
       <div className="p-6 border-b border-gray-100 flex items-center justify-between bg-white/80">
         <div className="flex items-center space-x-4">
           <div className="relative">
-             <div className="w-10 h-10 rounded-2xl bg-brand flex items-center justify-center text-white text-lg font-black">M</div>
+             <div className="w-10 h-10 rounded-2xl bg-brand flex items-center justify-center text-white text-lg font-black">N</div>
              <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></span>
           </div>
           <div>
-            <h4 className="font-black text-gray-900 text-sm tracking-tight">Kitchen Assistant</h4>
+            <h4 className="font-black text-gray-900 text-sm tracking-tight">Beauty Assistant</h4>
             <div className="flex items-center gap-1.5">
                <span className="text-[9px] font-black text-green-500 uppercase tracking-widest">Live Now</span>
                <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
@@ -85,7 +85,7 @@ const AIChat: React.FC<AIChatProps> = ({ products, isOpen, onClose, user, orders
         {isLoading && (
           <div className="flex justify-start">
             <div className="bg-white px-5 py-3 rounded-3xl rounded-tl-none border border-gray-100 shadow-sm flex items-center gap-2">
-              <span className="text-[10px] font-black uppercase text-gray-400 tracking-widest animate-pulse">Kitchen is typing...</span>
+              <span className="text-[10px] font-black uppercase text-gray-400 tracking-widest animate-pulse">Consultant is typing...</span>
               <div className="flex space-x-1">
                 <div className="w-1 h-1 bg-brand rounded-full animate-bounce"></div>
                 <div className="w-1 h-1 bg-brand rounded-full animate-bounce delay-75"></div>
@@ -114,7 +114,7 @@ const AIChat: React.FC<AIChatProps> = ({ products, isOpen, onClose, user, orders
         <div className="relative">
           <input 
             type="text" 
-            placeholder="Ask about spices, dishes..."
+            placeholder="Ask about skin type, products..."
             className="w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 text-sm font-bold focus:outline-none focus:ring-4 ring-brand/10 pr-14"
             value={input}
             onChange={(e) => setInput(e.target.value)}

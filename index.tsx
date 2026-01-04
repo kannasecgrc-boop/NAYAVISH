@@ -20,10 +20,10 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then(registration => {
-        console.log('ManaKitchen ServiceWorker registration successful with scope: ', registration.scope);
+        console.log('Nayavish ServiceWorker registration successful with scope: ', registration.scope);
       })
       .catch(err => {
-        console.log('ManaKitchen ServiceWorker registration failed: ', err);
+        console.log('Nayavish ServiceWorker registration failed: ', err);
       });
   });
 }

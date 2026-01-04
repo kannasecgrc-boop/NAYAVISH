@@ -41,8 +41,8 @@ const CheckoutWorkflow: React.FC<CheckoutWorkflowProps> = ({ items, subtotal, de
     const orderId = `ORD-${Date.now().toString().slice(-6)}`;
     
     // Simulating Gateway
-    await sendSMS(details.zip || 'Customer', `Order ${orderId} received at Mana Kitchen. Total: ₹${totalPayable}.`);
-    await sendWhatsApp('Customer', `Order ${orderId} confirmed! Kitchen is prepping.`);
+    await sendSMS(details.zip || 'Customer', `Order ${orderId} received at Nayavish. Total: ₹${totalPayable}.`);
+    await sendWhatsApp('Customer', `Order ${orderId} confirmed! We are packing your order.`);
     
     setTimeout(() => {
         setIsFinalizing(false);
@@ -55,7 +55,7 @@ const CheckoutWorkflow: React.FC<CheckoutWorkflowProps> = ({ items, subtotal, de
       {isFinalizing && (
         <div className="fixed inset-0 z-[200] bg-white/95 backdrop-blur-md flex flex-col items-center justify-center p-10 text-center">
            <div className="w-20 h-20 border-4 border-gray-100 border-t-brand rounded-full animate-spin mb-8" />
-           <h3 className="text-3xl font-black text-gray-900 tracking-tighter uppercase">Kitchen Transmitting...</h3>
+           <h3 className="text-3xl font-black text-gray-900 tracking-tighter uppercase">Processing Order...</h3>
            <p className="text-gray-400 mt-4 font-black uppercase tracking-widest text-[10px]">Verified by Merchant Node</p>
         </div>
       )}
@@ -173,7 +173,7 @@ const CheckoutWorkflow: React.FC<CheckoutWorkflowProps> = ({ items, subtotal, de
           <div className="pt-4 border-t border-gray-100 space-y-3">
              <div className="flex justify-between text-[10px] font-bold text-gray-400 uppercase"><span>Subtotal</span><span>₹{subtotal}</span></div>
              <div className="flex justify-between text-[10px] font-bold text-gray-400 uppercase">
-               <span>Handling & Prep</span>
+               <span>Handling & Packing</span>
                {isFreeDelivery ? (
                  <span className="text-green-600"><span className="line-through text-gray-300 mr-2">₹{deliveryFee}</span>FREE</span>
                ) : (
@@ -192,4 +192,3 @@ const CheckoutWorkflow: React.FC<CheckoutWorkflowProps> = ({ items, subtotal, de
 };
 
 export default CheckoutWorkflow;
-    

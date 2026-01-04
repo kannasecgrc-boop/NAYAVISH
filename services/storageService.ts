@@ -43,9 +43,9 @@ export const storageService = {
       whatsappNumber: '9876543210',
       officeAddress: 'Nayavish Beauty House, Green Valley, Hyderabad - 500034',
       aboutUs: 'Bringing ancient Ayurvedic beauty secrets to the modern world.',
-      operatingHoursLunch: '10:00 AM - 08:00 PM', // Reused field for General Hours
-      operatingHoursDinner: 'Closed on Sundays',    // Reused field for Days off
-      operatingDays: 'Nationwide Delivery',
+      openingHours: '10:00 AM - 09:00 PM', 
+      supportAvailability: 'Mon - Sat (Sundays Off)', 
+      operatingDays: 'Nationwide Delivery Available',
       bannerHighlight: '✨ GLOW UP SALE: Flat 20% OFF on Haircare Kits!',
       promoImage: '',
       promoBackgroundColor: '#fbcfe8',
@@ -61,6 +61,15 @@ export const storageService = {
     // Merge saved settings with defaults to ensure new fields (like promoImage) exist
     if (saved) {
         const parsed = JSON.parse(saved);
+        // Migration logic for old keys to new keys
+        if (parsed.operatingHoursLunch) {
+            parsed.openingHours = parsed.operatingHoursLunch;
+            delete parsed.operatingHoursLunch;
+        }
+        if (parsed.operatingHoursDinner) {
+            parsed.supportAvailability = parsed.operatingHoursDinner;
+            delete parsed.operatingHoursDinner;
+        }
         // Migration fix for old badges
         if (parsed.customBadges && parsed.customBadges.length > 0 && typeof parsed.customBadges[0] === 'string') {
              parsed.customBadges = defaultSettings.customBadges;
@@ -88,7 +97,7 @@ export const storageService = {
   createBackup: () => {
     const data = {
       timestamp: new Date().toISOString(),
-      version: '1.0.3',
+      version: '1.0.4',
       products: JSON.parse(localStorage.getItem(KEYS.PRODUCTS) || '[]'),
       orders: JSON.parse(localStorage.getItem(KEYS.ORDERS) || '[]'),
       users: JSON.parse(localStorage.getItem(KEYS.USERS) || '[]'),

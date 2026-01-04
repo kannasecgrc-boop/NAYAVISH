@@ -45,12 +45,12 @@ const Footer: React.FC<FooterProps> = ({ settings }) => {
             <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-6">Operating Hours</h4>
             <div className="space-y-3">
               <div className="flex justify-between items-center text-sm font-bold">
-                 <span className="text-gray-400">Lunch</span>
-                 <span className="text-gray-900">{settings.operatingHoursLunch}</span>
+                 <span className="text-gray-400">Store Timings</span>
+                 <span className="text-gray-900">{settings.openingHours}</span>
               </div>
               <div className="flex justify-between items-center text-sm font-bold">
-                 <span className="text-gray-400">Dinner</span>
-                 <span className="text-gray-900">{settings.operatingHoursDinner}</span>
+                 <span className="text-gray-400">Support / Days</span>
+                 <span className="text-gray-900">{settings.supportAvailability}</span>
               </div>
               <div className="mt-4 p-3 bg-green-50 rounded-xl text-center">
                  <p className="text-[9px] font-black text-green-600 uppercase">{settings.operatingDays}</p>
@@ -61,7 +61,7 @@ const Footer: React.FC<FooterProps> = ({ settings }) => {
 
         <div className="pt-10 border-t border-gray-50 text-center">
           <p className="text-[10px] font-black text-gray-300 uppercase tracking-widest">
-            © {new Date().getFullYear()} {settings.storeName} • Authentic Taste of Madhira
+            © {new Date().getFullYear()} {settings.storeName} • Authentic Natural Beauty
           </p>
         </div>
       </div>

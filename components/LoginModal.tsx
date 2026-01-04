@@ -68,11 +68,12 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onLogin, regis
 
     // Admin Login Simulation
     if (isAdminMode) {
-       if (email === 'admin@mana.com' && password === 'admin') {
+       // Updated to match Nayavish branding
+       if (email === 'admin@nayavish.com' && password === 'admin') {
          onLogin({} as User, true); // True flag for Admin
          onClose();
        } else {
-         alert('Invalid Admin Credentials (Try admin@mana.com / admin)');
+         alert('Invalid Admin Credentials (Try admin@nayavish.com / admin)');
        }
        return;
     }
@@ -107,7 +108,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onLogin, regis
     else {
       setIsProcessing(true);
       // Check if phone exists (Optional for OTP flow, we can auto-create or error. Let's send OTP regardless for security/mock)
-      const success = await sendSMS(phone, "Your Mana Family Restaurant verification code is 123456.");
+      const success = await sendSMS(phone, "Your Nayavish Cosmetics verification code is 123456.");
       if (success) {
         addSystemLog('SMS', phone, 'DELIVERED (SIMULATED)');
         setRecoveryReason('login');
@@ -150,7 +151,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onLogin, regis
       const newUser: User = {
         id: Math.random().toString(36).substr(2, 9),
         name: name || (email ? email.split('@')[0] : `Guest-${phone}`),
-        email: email || `${phone}@mana.local`,
+        email: email || `${phone}@nayavish.local`,
         phone: phone,
         address: address,
         avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${email || phone}`,

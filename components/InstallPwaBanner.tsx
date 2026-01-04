@@ -15,7 +15,7 @@ const InstallPwaBanner: React.FC<InstallPwaBannerProps> = ({ installPrompt, onIn
       <div className="max-w-md mx-auto bg-gray-900 text-white rounded-3xl p-5 shadow-2xl flex items-center justify-between border border-gray-800 ring-1 ring-white/10 backdrop-blur-xl">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 bg-brand rounded-xl flex items-center justify-center text-lg font-black shadow-lg">
-            M
+            N
           </div>
           <div>
             <h4 className="font-black text-sm uppercase tracking-wide">Install App</h4>

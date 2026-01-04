@@ -1,5 +1,5 @@
 
-const CACHE_NAME = 'mana-kitchen-v1.0.3-prod';
+const CACHE_NAME = 'nayavish-v1.0.4-prod';
 const OFFLINE_URL = '/index.html';
 
 // Assets to strictly cache on install
@@ -15,7 +15,7 @@ const PRECACHE_URLS = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('ManaKitchen: Pre-caching offline page and styles');
+      console.log('Nayavish: Pre-caching offline page and styles');
       // We use addAll for local files, but for CDNs we might need to handle CORS
       // For simplicity in this environment, we attempt to cache all.
       return cache.addAll(PRECACHE_URLS).catch(err => {
@@ -31,7 +31,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((keyList) => {
       return Promise.all(keyList.map((key) => {
         if (key !== CACHE_NAME) {
-          console.log('ManaKitchen: Removing old cache', key);
+          console.log('Nayavish: Removing old cache', key);
           return caches.delete(key);
         }
       }));

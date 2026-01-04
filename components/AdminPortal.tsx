@@ -749,11 +749,11 @@ const AdminPortal: React.FC<AdminPortalProps> = ({
                     </div>
                     <div>
                        <label className="text-[10px] font-black text-gray-400 uppercase mb-2 block">Daily Opening Times</label>
-                       <input value={tempSettings.operatingHoursLunch} onChange={e => setTempSettings({...tempSettings, operatingHoursLunch: e.target.value})} className="w-full px-6 py-4 bg-gray-50 rounded-2xl border border-transparent focus:border-brand font-bold outline-none" />
+                       <input value={tempSettings.openingHours} onChange={e => setTempSettings({...tempSettings, openingHours: e.target.value})} className="w-full px-6 py-4 bg-gray-50 rounded-2xl border border-transparent focus:border-brand font-bold outline-none" />
                     </div>
                     <div>
-                       <label className="text-[10px] font-black text-gray-400 uppercase mb-2 block">Off Days / Notes</label>
-                       <input value={tempSettings.operatingHoursDinner} onChange={e => setTempSettings({...tempSettings, operatingHoursDinner: e.target.value})} className="w-full px-6 py-4 bg-gray-50 rounded-2xl border border-transparent focus:border-brand font-bold outline-none" />
+                       <label className="text-[10px] font-black text-gray-400 uppercase mb-2 block">Support / Off Days</label>
+                       <input value={tempSettings.supportAvailability} onChange={e => setTempSettings({...tempSettings, supportAvailability: e.target.value})} className="w-full px-6 py-4 bg-gray-50 rounded-2xl border border-transparent focus:border-brand font-bold outline-none" />
                     </div>
                     <div className="md:col-span-2">
                        <label className="text-[10px] font-black text-gray-400 uppercase mb-2 block">Service Tagline</label>

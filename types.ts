@@ -23,8 +23,8 @@ export interface StoreSettings {
   whatsappNumber: string;
   officeAddress: string;
   aboutUs: string;
-  operatingHoursLunch: string;
-  operatingHoursDinner: string;
+  openingHours: string;      // Renamed from operatingHoursLunch
+  supportAvailability: string; // Renamed from operatingHoursDinner
   operatingDays: string;
   bannerHighlight: string;
   promoImage: string; // New: Promotion background image

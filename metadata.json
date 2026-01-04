@@ -1,15 +1,15 @@
 {
   "name": "NAYAVISH",
-  "short_name": "ManaKitchen",
+  "short_name": "Nayavish",
   "description": "BEST BEAUTY COSMETICS WITH HANDMADE and AYURVEDIC PREPARATION BY GRAMEENA'S TALENTED AND EXPERIENCED GRANDMOMS ",
-  "theme_color": "#8b0000",
+  "theme_color": "#be185d",
   "background_color": "#fcfcfc",
   "display": "standalone",
   "orientation": "portrait",
   "categories": [
-    "food",
     "lifestyle",
-    "shopping"
+    "shopping",
+    "beauty"
   ],
   "icons": [
     {
