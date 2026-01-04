@@ -446,7 +446,24 @@ const AdminPortal: React.FC<AdminPortalProps> = ({
 
                       <div>
                         <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1.5 ml-1">Image URL</label>
-                        <input value={productForm.image} onChange={e => setProductForm({...productForm, image: e.target.value})} className="w-full px-5 py-3 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-4 ring-brand outline-none font-bold text-xs font-mono" placeholder="https://..." />
+                        <div className="flex gap-3">
+                          <input 
+                            value={productForm.image} 
+                            onChange={e => setProductForm({...productForm, image: e.target.value})} 
+                            className="flex-1 px-5 py-3 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-4 ring-brand outline-none font-bold text-xs font-mono" 
+                            placeholder="https://..." 
+                          />
+                          {productForm.image && (
+                            <div className="w-12 h-12 shrink-0 rounded-xl overflow-hidden border border-gray-200 bg-gray-50 shadow-sm">
+                              <img 
+                                src={productForm.image} 
+                                alt="Preview" 
+                                className="w-full h-full object-cover" 
+                                onError={(e) => (e.currentTarget.style.display = 'none')}
+                              />
+                            </div>
+                          )}
+                        </div>
                       </div>
 
                       <div>
