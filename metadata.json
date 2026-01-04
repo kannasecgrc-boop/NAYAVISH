@@ -1,0 +1,22 @@
+{
+  "name": "NAYAVISH",
+  "short_name": "ManaKitchen",
+  "description": "BEST BEAUTY COSMETICS WITH HANDMADE and AYURVEDIC PREPARATION BY GRAMEENA'S TALENTED AND EXPERIENCED GRANDMOMS ",
+  "theme_color": "#8b0000",
+  "background_color": "#fcfcfc",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": [
+    "food",
+    "lifestyle",
+    "shopping"
+  ],
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=512&h=512&fit=crop",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "requestFramePermissions": []
+}

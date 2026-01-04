@@ -1,0 +1,38 @@
+
+{
+  "name": "MANA FAMILY RESTAURANT - MADHIRA",
+  "short_name": "ManaKitchen",
+  "description": "Authentic Hyderabadi Dum Biryani, Gongura specialties, and family dining in Madhira. Order online now.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fcfcfc",
+  "theme_color": "#8b0000",
+  "orientation": "portrait",
+  "categories": ["food", "lifestyle", "shopping"],
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=192&h=192&fit=crop",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=512&h=512&fit=crop",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1563379091339-03b21bc4a4f8?auto=format&fit=crop&q=80&w=800",
+      "sizes": "800x800",
+      "type": "image/jpg",
+      "form_factor": "wide"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&q=80&w=800",
+      "sizes": "800x800",
+      "type": "image/jpg",
+      "form_factor": "narrow"
+    }
+  ]
+}
